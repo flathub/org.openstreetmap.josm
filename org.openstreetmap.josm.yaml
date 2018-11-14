@@ -22,20 +22,6 @@ modules:
     build-commands:
       - /usr/lib/sdk/openjdk11/install.sh
 
-  - name: josm
-    disabled: true
-    buildsystem: simple
-    build-commands:
-      - /usr/lib/sdk/openjdk11/enable.sh
-      # - ant/bin/ant dist
-
-    sources:
-      - type: git
-        url:  git://github.com/openstreetmap/josm.git
-      - type: archive
-        url:  https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.2-bin.tar.xz
-        sha256: 361c8ad2ed8341416e323e7c28af10a8297170a80fdffba294a5c2031527bb6c
-        dest: ant
 
   - name: josm-binary
     buildsystem: simple

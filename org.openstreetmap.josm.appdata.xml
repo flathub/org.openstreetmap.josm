@@ -29,6 +29,12 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
 <releases>
+<release version="14460" date="2018-11-28" >
+    <description>
+    The height of each panel on the right side is saved when JOSM is closed.
+    "Download as new layer" changed from a checkbox to an own button.
+    </description>
+</release>
 <release version="14382" date="2018-10-28" >
     <description>
     Option to display object version in lists 

@@ -29,6 +29,35 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
 <releases>
+<release version="14620" date="2018-12-31" >
+    <description>
+    major enhancements
+        Fixed many memory leaks (#17040)
+        Fixed many outdated imagery entries (#16073)
+        Animate the "Getting Started" page with shining stars 15 days around Christmas (r14578) 
+    medium enhancements
+        Auto-resize Tags table to fit content (r14476, r14613)
+        Map paint: Improve performance of fill-image instruction (r14557)
+        Map paint: Improve rendering time of partly visible complex shapes (r14582:14584)
+        Validator: Improve performance of MapCSSTagChecker (r14469, r14474)
+        Validator: Improve progress monitor (r14599)
+        Validator: Warn about simple typos in tag values (#17055) 
+    minor enhancements
+        Support Internationalized domain names (IDN, r14496)
+        Support user logins ending by " !" (r14404, r14406, r14480)
+        Ignore MapCSS declarations starting with "-" to allow osmose extensions (r14481, r14489)
+        Load Taiwan Government Root CA certificate (r14498)
+        Update to latest ESRI projection definitions (r14568)
+        Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+            add 4wd_only, improve access preset layout (r14534)
+            add shop=gas (r14575), building=carport (r14610)
+            improve billboard and crane presets (r14560, r14574)
+            improve sport=climbing presets (r14591, r14597)
+            improve emergency=fire_hydrant preset (r14593:14595, r14608)
+            warn about area:highway on unclosed ways and nodes (r14577) 
+        More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation, see SVN log messages of milestone 18.12     
+    </description>
+</release>
 <release version="14460" date="2018-11-28" >
     <description>
     The height of each panel on the right side is saved when JOSM is closed.

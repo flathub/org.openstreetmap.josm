@@ -28,7 +28,7 @@ modules:
     buildsystem: simple
     build-commands:
         - install -D josm.sh /app/bin/josm
-        - install -D josm-snapshot-14460.jar /app/bin/josm.jar
+        - install -D josm-snapshot-14620.jar /app/bin/josm.jar
         - install -D org.openstreetmap.josm.desktop /app/share/applications/org.openstreetmap.josm.desktop
         - install -D org.openstreetmap.josm.appdata.xml /app/share/metainfo/org.openstreetmap.josm.appdata.xml
         - install -D josm.svg /app/share/icons/hicolor/scalable/apps/josm.svg
@@ -49,5 +49,5 @@ modules:
         sha256: 9b18b076fd371fc87b851a700bb1fff6547b061769af57a3abc9af83405c16d2
 
       - type: file
-        url: https://josm.openstreetmap.de/download/josm-snapshot-14460.jar
-        sha256: c561a5ba640bfd4da801dd7419644821fc50d10d9624a742e48cc8dd521825c9
+        url: https://josm.openstreetmap.de/download/josm-snapshot-14620.jar
+        sha256: 7689034ec9e192552c669d7daf5ad6458a4f57d1f0d57a22e9ba5356b912f67a

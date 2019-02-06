@@ -29,6 +29,40 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
 <releases>
+  <release version="14760" date="2018-02-01" >
+    <description>
+    major enhancements
+        When unglueing a node from a way, retain the history on the node which gets assigned the tags. (r14653, r14662)
+        Add tab with installation details in "About" popup (r14693, r14701, r14707)
+    medium enhancements
+        Improved "Zoom to selection" behavior (r14628, r14734)
+        Allow to save active ValidatorLayer (r14667, r14668)
+        Make auto-resizing Tags table to fit content optional and disabled by default (r14677)
+        Display non default API URL in upload dialog (r14729)
+    minor enhancements
+        Imagery Preferences: harmonize cache size units (r14631)
+        Imagery Preferences: collect all cache settings in the same tab (r14632)
+        Detect preset wiki languages automatically (r14646, r14647, r14660, r14664)
+        Status report: exclude file history, Overpass queries (r14671)
+        Add Help buttons to several windows (r14655:14658, r14742:14745)
+        Restore contextual menu of history dialog (r14676)
+        GenericRelationEditor: bind Ctrl+Enter to okay action (r14679)
+        Improve progressMonitor for internal osm (xml) importer (r14688)
+        ChildRelationBrowser: add popup menu (r14713)
+        Remove support for TagChecker configuration files i.e. tagchecker.cfg (r14727)
+        Improve progress bar of history browser (14756)
+        Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+            Don't sort map_size values in information=map preset (r14621)
+            Add 22000 as a valid voltage value (r14645)
+            Add naming tags for relations: water/waterway/wetland (r14680)
+            Fine tune unknown tags warning (r14696, r14739, r14750, r14751)
+            Add Key:interval to presets (r14711, r14712)
+            Add traffic_calming=dip, sort traffic calming presets more logical like in the wiki (r14714)
+            Add type of zoo (r14715)
+            Validate correct Key:interval syntax (r14728)
+            Remove some false positve validator warnings of attraction=summer_toboggan (r14735) 
+        More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation, see SVN log messages of milestone 19.01 
+    </description>
 <release version="14620" date="2018-12-31" >
     <description>
     major enhancements

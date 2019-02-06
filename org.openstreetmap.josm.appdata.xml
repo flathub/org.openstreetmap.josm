@@ -63,6 +63,7 @@
             Remove some false positve validator warnings of attraction=summer_toboggan (r14735) 
         More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation, see SVN log messages of milestone 19.01 
     </description>
+  </release>
 <release version="14620" date="2018-12-31" >
     <description>
     major enhancements

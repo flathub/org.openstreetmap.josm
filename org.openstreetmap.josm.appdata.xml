@@ -29,7 +29,32 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
 <releases>
-  <release version="14760" date="2018-02-01" >
+  <release version="14824" date="2019-03-03">
+    <description>
+      major enhancements
+        new language: Canadian English (en_CA: r14811, r14812)
+      medium enhancements
+        add mapcss function gpx_distance() to get the distance to the closest gpx point (r14802)
+      minor enhancements
+        gpx download improvements (r14761, r14762)
+        remember state of minimized docked panels when closing undocked panel (r14765, r14820)
+        Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+          add wiki documented denominations >500 uses (r14767, r14773)
+          don't warn about "customer is not a valid restriction value" (r14767, r14774)
+          add crop=cereal (r14769)
+          fix typo in tidal generator preset: steam -> stream (r14780)
+          warn about place without name, various amenity without name or without operator, mountain_pass and peak without ele, place_of_worship without denomination (r14798, r14799, r14818)
+          allows multiple values in URL validator (r14803)
+          deprecated amenity=sauna (r14804, r14815)
+          complain about shop=yes, except for amenity=fuel (r14805)
+          support rendering of boundary on relation ways for all boundary types not just administrative (r14806)
+          display leisure=track as line only (without fill color) by default. If area=yes is added or if it's a multipolygon, display the fill color. Warn about area=no on multipolygons (error level) (r14808)
+          deprecate natural=waterfall in favor of waterway=waterfall (r14814, r14815)
+          change preset: piste:grooming=classic;skating to classic+skating (r14821)
+      More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation
+    </description>
+  </release>
+  <release version="14760" date="2019-02-01">
     <description>
     major enhancements
         When unglueing a node from a way, retain the history on the node which gets assigned the tags. (r14653, r14662)

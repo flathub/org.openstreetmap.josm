@@ -29,6 +29,53 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
 <releases>
+  <release version="14945" date="2019-03-31">
+    <description>
+    major enhancements
+        various improvements to the validator panel (see below) 
+    medium enhancements
+        Validator dialog: manage ignore list (r14828, r14842, r14851, r14852, r14939)
+        Validator dialog: update validator tree when primitives are purged or removed and existing errors refer to those primitives (r14849, r14856, r14892, r14907)
+        Validator dialog: improve performance (r14845, r14855, r14857)
+        Validator dialog: add "Ignore for now" feature (r14889, r14894, r14912, r14931, r14893)
+        improve performance for GPX layer action "Download from OSM along this track" (r14868, r14872)
+        show last used tags in Add Tag Dialog, not only last added tags (r14926) 
+    minor enhancements
+        Validator dialog: Disable buttons when they are not functional (r14825, r14847, r14858)
+        Validator dialog: improved Lookup button (r14826, r14834, r14854, r14887)
+        add missing conflict when merging a primitive modified and deleted in two data sets (r14922)
+        Preferences: Display languages in alphabetical order (r14929)
+        allow to paste full changeset URL where changeset id is expected (r14930)
+        support optional browse/ in osm url at open location, used by Keepright (r14944)
+        Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+            set correct translation context for colour tags in hydrant preset (r14829)
+            warn about leisure=nature_reserve on nodes (r14830)
+            warn about boundary=administrative together with landuse=residential (r14831)
+            warn about highway=pedestrian together with width&lt;3 (r14831, r14840, r14910)
+            add sport=rowing (r14841)
+            don't warn about footways ending at amenity=toilets (r14861)
+            clean up religion and denomination, replace religion=unitarian by religion=unitarian_universalist, warn about religion=catholic, add religion=tenrikyo and religion=confucian, add icons (r14867, r14873)
+            add shop=massage (r14874)
+            warn about shop=shopping_centre (r14874)
+            reorder agricultural=* combo in access preset and give it a better label (r14876, r14941)
+            Support interval as restriction-type in conditional syntax validator test (r14879)
+            Suppress warning Unknown property value - Value '12' for key 'capacity:disabled' is unknown, maybe one of [1, 2] is meant? (r14881)
+            don't warn about water=* on amenity=lavoir (r14883)
+            warn about descriptive names (r14884, r14885, r14911, r14891, r14923)
+            fix wrong warning for misspelled tag key (r14897)
+            suggest to remove building:ruian:type when there is no added value (r14901)
+            detect highway=footway|pedestrian with foot=yes|designated (and highway=cycleway with bicycle=yes|designated) (r14904, r14918, r14942, r14943)
+            warn about obsolete type=associatedStreet relations in germany (r14906, r14914)
+            add bicycle_parking=bollard (r14909, r14915)
+            don't warn about width on leisure=track (r14915)
+            add osmarender:* tags to automatically discarded tags (r14916, r14925)
+            deprecate is_in globally / is_in:* for nodes and ways (r14917)
+            detect and fix non-printing control characters (r14933)
+            replace shop=fashion with shop=clothes (r14935)
+            warn about ele values with more than 2 decimal places (r14940) 
+        More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation, see SVN log messages of milestone 19.02 
+    </description>
+  </release>
   <release version="14824" date="2019-03-03">
     <description>
       major enhancements

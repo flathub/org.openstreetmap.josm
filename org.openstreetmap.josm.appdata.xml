@@ -29,6 +29,57 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
 <releases>
+  <release version="15031" date="2019-04-28">
+    <description>
+    major enhancements
+      major bugfix: fixed several cases where changeset could be uploaded with a previous comment (#11168, #13474, #17452)
+      Merge the plugin download_along into core, the menu item "Download along..." moved from the "More tools" to the "File" menu. Improve its functionallity too. (#17551)
+
+    medium enhancements
+      drastically improve performance for SimplifyWayAction when used with very complex ways (#16102)
+      improve offline startup time on Windows by making certificate download optional (#17619)
+      display lines for local gpx tracks without tags (#17596)
+      possibility to reject uploads that do not follow comment/source upload policy, using the following 4 new properties: upload.comment.forbidden-terms, upload.comment.mandatory-terms, upload.source.forbidden-terms, upload.source.mandatory-terms (#17634)
+      reject uploads with source=google (#17634)
+
+    minor enhancements
+      fix a bug at the offset handling of geotagged images (#16846)
+      improve error handling of write protected files (#17237)
+      adjust "Zoom to download"/"Zoom to downloaded data" behavior and add new preference zoom.scale-follow-native-resolution-at-load (#17591)
+      fix a bug with filters of locked layers (#17610)
+      Allow to configure shortcut for "Move Node" action (#17654)
+      Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+        warn about highly suspicious Unicode characters (#17546, #17595)
+        warn about unnecessary gnis:Class tags (#17547)
+        warn about addr:housenumber without number (#17486)
+        raise "questionable key (ending with a number)" to warning level (#17554)
+        add wall=castle_wall, seawall and flood_wall (#17507)
+        add shop=carpet (#17557)
+        improve turn restriction validator warnings (#17561, #17567)
+        don't warn about man_made=wildlife_crossing together with bridge|tunnel=yes (#17570)
+        don't warn about psv=* on barrier=bollard (#17572)
+        remove building:ruian:type check (#17482)
+        warn about tracktype=grade1 with surface which does not fit with grade1 (#17592)
+        warn about tracktype=grade2 with surface=sand|mud (#17594)
+        improve messages created by RelationChecker (#17567)
+        raise addr:street together with addr:place to warning level (#17604)
+        warn about type=associatedStreet in germany (#17484)
+        add icon for draft=sawmill (r14998)
+        add sport=fitness (r15002)
+        warn about building:part=* together with building=* (#17630)
+        warn about sport=football (#17593)
+        warn about more descriptive names (#17629)
+        improve overlapping areas test (#17614)
+        improve "node connects highway and building" test (#17025)
+        allow the user to change the color of tagged nodes which don't get an icon on high zoom (#17147)
+        add material combo to historic=memorial preset (r15017)
+        improve inside area test (#17652)
+        improve performance of selecting complex multipolygons with double click (#17652)
+        improve performance in validator by not running "information" level checks if not wanted (#17656)
+        don't warn about shop=boat is unknown, maybe bag is meant (#17655)
+        don't warn about shop=tiles is unknown, maybe tyres is meant (#17631)
+    </description>
+  </release>
   <release version="14945" date="2019-03-31">
     <description>
     major enhancements

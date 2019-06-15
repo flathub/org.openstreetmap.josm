@@ -29,6 +29,63 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
 <releases>
+  <release version="15155" date="2019-06-02">
+    <description>
+    major enhancements
+        add category icons in imagery preferences, add tooltips and a box to filter the list (#16301)
+        display dynamic imagery entries in sub menus when they have category not equal to photo (#17676, #17779) 
+    medium enhancements
+        mapcss: 4 new operators: ⊆,⊈,⊇,⊉ (#10391) 
+    minor enhancements
+        allow to define exceptions to the list of forbidden terms, through upload.comment.exception-terms property (#17634)
+        Remove google from default list of forbidden terms. Useful for DWG. (#17634)
+        Fix timezones and DST for image correlation (#17576)
+        Add new functions for plugin developers to find distances between primitives (#17616)
+        preset layout: don't merge single checks into immediate following checkgroup (#17698)
+        display a notification if the user is blocked (#17722)
+        load "MicroSec e-Szigno Root CA 2009" certificate, used by city of Budapest (#17668)
+        improve Update multipolygon feature (#17767)
+        Search dialog: input field reacts on changes in radio buttons (#17754)
+        Search dialog: detect invalid MapCSS search expressions (#17746)
+        ignore unclosed ways and multipolygons with unclosed outer rings in methods Geometry.filterInsidePolygon() and Geometry.filterInsideMultipolygon() (#17745)
+        possibility to set the Bing API key using jmapviewer.bing.api-key (#17744)
+        Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+            don't warn about arrows as unusual Unicode character (#17667)
+            don't warn about duplicate address if they have different addr:suburb (#17674)
+            warn about even more descriptive names: name=school|école|Школа|parc|park (#17633)
+            render tunnel=flooded like tunnel=culvert (#17693)
+            add diameter and pressure to pipeline and penstock presets (#17694)
+            improve crossing and contains (x inside y) validator tests (#12627, #14287, #14289, #17695)
+            draw man_made=cutline below highway=* in own layer. Adapt color and width. (#17704)
+            make TurnrestrictionTest aware of conditional restrictions (#17709)
+            add bridge/tunnel/embankement/cutting checks to railway presets (#17650)
+            better preset layout bridge/tunnel/embankement/cutting checks in two columns (#17650)
+            remove incline from highway=bus_guideway preset (#17650)
+            remove incline and oneway from roundabout preset (#17650)
+            remove branch=* from all power related presets (#17707)
+            remove voltage=* and frequency=* from power=plant presets (#17707)
+            add a warning about voltage=* and frequency=* on power=plant (#17707)
+            add plant:source to power=plant presets (#17707)
+            detect if a oneway in a relation may be going in the wrong direction (#17501)
+            add natural=strait (#17731)
+            allow lines for natural=bay , add bay=fjord checkbox in natural=bay preset, don't warn about long way segments of bay=fjord ways (#17727)
+            deprecate leisure=common (#17556)
+            add passenger_information_display and route_ref to public_transport=platform and highway=bus_stop presets (#17713)
+            add shop=watches (#17519)
+            warn about junction=yes together with highway=* (#17623)
+            warn about "A linear object highway=* without area=yes has a tag indicating that it is an area" at info level (#17623)
+            warn about power=plant together with generator:*=* and power=generator together with plant:*=* (#17644)
+            add telecom presets (street_cabinet=telecom, telecom=exchange, telecom=connection_point, telecom=service_device) (#17689, #17690, #17692)
+            don't throw warning "node connects highway and building" for entrance nodes (r15118)
+            Don't produce warning "Unknown property value - Value 'bank' for key 'building' is unknown, maybe 'barn' is meant?" (#17055)
+            Don't produce warning "Unknown property value - Value 'peat' for key 'resource' is unknown, maybe 'lead' is meant?" (#17762)
+            Don't produce "Relations with same members" for relations without members. They will be flagged as empty relations. (#17011)
+            Pipeline valve preset extension (#17719)
+            don't warn about addr:housenumber=bb in Bosnia and Herzegovina (#17486)
+            report building=hangar outside of aeroway (#10391) 
+        More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation, see SVN log messages of milestone 19.05     
+    </description>
+  </release>
   <release version="15031" date="2019-04-28">
     <description>
     major enhancements

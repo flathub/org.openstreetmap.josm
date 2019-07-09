@@ -29,6 +29,68 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
 <releases>
+  <release version="15237" date="2019-07-09">
+    <description>
+    major enhancements
+        filter imagery list by (localized) country name (#17781) 
+    medium enhancements
+        bugfix: incompletely downloaded turn restrictions did sometimes break when splitting the from way (#17810)
+        display external resources icons in the preferences (#13458)
+        display IPTC metadata from jpeg/tiff images (caption, headline, keywords, object name) (#17848)
+        add dedicated buttons in filter dialog to sort/reverse filters order. (#14208)
+        add HTTP/2 support (needs Java 11 and http2 plugin, #17861) 
+    minor enhancements
+        improve CreateMultipolygonAction (#17768)
+        improve filter dialog table header (dynamic width, sortable) (#14208)
+        Improve performance when loading or validating complex multipolygon relation (#17819)
+        command line: Use %U code for Linux desktop Exec parameter to allow URLs in addition to file path (#17824)
+        allow to download geo: URI from the command line (#17825)
+        support Geo URIs with WGS84 CRS and/or uncertainty (#17825)
+        fix Create/Update multipolygon with touching inner rings (#17768)
+        increase decimal places of length in statusbar from one to two (#17823)
+        Don't zoom to download area by default for "Update Data" and "Download Along" actions. (#17871)
+        use a proper icon for "reorder imagery layers" action (#17826)
+        Replace OSM History Viewer (osmrmhv) by OSM History Viewer (Mapki) (#17621)
+        Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+            add amenity=car_pooling (#17780)
+            add nudism attribute to beach, beach resort and campsite presets (r15157)
+            make siren:purpose a multiselect and searchable (#17787)
+            add building=bakehouse (#17797)
+            add Diet preset and link it in some others (#17043)
+            deprecate cuisine=vegan|vegetarian in favor of diet:vegan|vegetarian (#17043)
+            add more cuisine=* values (#17043)
+            add opening_hours:kitchen=* (#17798)
+            deprecate kitchen_hours=* in favor of opening_hours:kitchen=* (#17798)
+            add reservation=* to more presets (#17798)
+            add wetland=fen (#17799)
+            add cemetery=sector (#17804)
+            warn about cemetery=sector together with landuse=cemetery (#17804)
+            add icon for craft=hvac (r15170)
+            add rendering for telecom presets (#17689, #17690, #17692)
+            add man_made=street_cabinet (#17814)
+            add shop=party (#17434)
+            add shop=doors (#17434)
+            add railway=railway_crossing (#17834)
+            less obtrusive railway=switch icon (r15188)
+            add railway:switch=* combo in railway=switch preset (r15188)
+            add junction:ref=* to motorway_link, trunk_link and primary_link presets (#17791)
+            add direction=* to traffic_sign presets (#17815)
+            warn about traffic_sign=maxspeed without maxspeed=* (r15190)
+            add bridge=boardwalk and remove deprecated bridge=swing in rendering (#10447)
+            don't warn about maxspeed on suspicious object if traffic_sign:forward or traffic_sign:backward is present (#17844)
+            add traffic_signals:direction to Traffic Signal preset (#17808)
+            add cycleway=asl (#10618)
+            draw man_made=dyke below highway=* in own layer to see the highway if tagged on the same way (#17741)
+            add amenity=money_transfer (#17681)
+            deprecate shop=money_transfer (#17681)
+            deprecate contact:google_plus (r15200)
+            add highway=toll_gantry (#16989)
+            add enforcement=toll to enforcement relation preset (r15201)
+            remove strange voltage value 15000;200000 (#17174)
+            don't warn about building=trullo not in presets 
+        More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation, see SVN log messages of milestone 19.06 
+    </description>
+  </release>
   <release version="15155" date="2019-06-02">
     <description>
     major enhancements

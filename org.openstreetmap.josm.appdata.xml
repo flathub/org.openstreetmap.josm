@@ -29,6 +29,12 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
 <releases>
+  <release version="15238" date="2019-07-10">
+    <description>
+    medium enhancements
+        bugfix: fix moving of 2+ selected relation members, events optimization (#17894)
+    </description>
+  </release>
   <release version="15237" date="2019-07-09">
     <description>
     major enhancements

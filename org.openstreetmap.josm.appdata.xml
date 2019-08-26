@@ -29,6 +29,70 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
 <releases>
+  <release version="15322" date="2019-08-26">
+    <description>
+      major enhancements
+        New logo (#18009)
+
+      medium enhancements
+
+        MapCSS: add new functions to retrieve OSM metadata: osm_user_name, osm_user_id, osm_version, osm_changeset_id, osm_timestamp (#17885)
+        MapCSS: Add sort method (#17995)
+        MapCSS: add tag_regex method to get keys by regex for comparison functions (#18057)
+        Mappaint styles: keep the style settings menu open after one has been selected (#10435)
+        Mappaint styles: Enable grouping of similar style settings for enabling/disabling several settings at once (#10435)
+        support RTKLib Positioning Solution files. Add new "Quality" GPX color mode (#17829)
+        Avoid adding multiple conflicts for single object (#17875)
+        Add arbitrary changeset tags via remote control (#18038)
+
+      minor enhancements
+
+        Enable download of incomplete members from cloned relations in relation editor (#17910)
+        don't include ImageryInfo field names in imagery search (#17918)
+        Don't break connectivity relations when ways are split (#17931)
+        display number of incomplete objects in OSM data layer information (#17979)
+        add missing space between name of wms endpoint and layer name (#18054)
+        Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+            remove check for old-style multipolygons (removed from OSM database in May 2017) (#17886)
+            Remove warning directing cycleway and footway taggings toward highway=path (#17901)
+            update piste:type values and make them searchable (r15252)
+            add bridge:movable=retractable and tilt (#17938)
+            don't warn about oneway on aeroway=runway or taxiway (r15254)
+            harmonize colors, warn about descriptive name=Hydrant (r15255)
+            disable addr:street together with addr:place warning in CZ and DK (#17604)
+            add preset and rendering support for highway=cycleway + foot=designated and highway=footway + bicycle=designated schema (#11780)
+            add manhole preset and warn about manhole=* without man_made=manhole (#17947)
+            deprecate amenity=garages, amenity=garage, office=real_estate, amenity=winery, shop=winery, amenity=youth_centre, bridge=pontoon, building:type, escalator, fenced, highway=abandoned, historic_name, landuse=field, leisure=beach, leisure=club, leisure=video_arcade, man_made=jetty, man_made=village_pump, man_made=water_tank, natural=moor, noexit=no, shop=dive, shop=furnace, sport=paragliding, tourism=bed_and_breakfast (#17370)
+            add guest_house=*, community_centre=*, community_centre:for=* (#17370)
+            replace diaper by changing_table and add validator rules (#17880)
+            warn about roof:shape=half_hipped (#17990)
+            warn about highway=cycleway cycleway=track (#17967)
+            warn about bridge_name and add bridge:name to bridge and movable bridge preset (#18003)
+            warn about generator:source, generator:method or generator:type without power=generator (#17997)
+            warn about Combined foot- and cycleway without segregated (except if surface is any kind of unpaved) (#17973)
+            remove special rendering of deprecated tags type=conifer and type=broad_leaved (#18010)
+            warn about access=public (#18007)
+            add most common opening_hours and collection_times (r15272)
+            replace crossing=island by crossing:island=yes (#17330)
+            new public_transport=platform icon (#17977)
+            Run "Building with an almost square angle" test only on ways inside download area (#18000)
+            don't warn about missing ref=* on highway=* if it is part of a type=route route=road relation which has a ref=* (#17970)
+            warn about highway=crossing crossing=no and railway=crossing crossing=no (#17330)
+            don't warn about unclosed sport=karting (r15297)
+            add resource to quarry preset (#18048)
+            add crop=sugarcane, coffea_plants (r15299)
+            add rendering for amenity=car_pooling and improve icon (#17780)
+            don't warn about "value games of key shop is unknown, maybe gas is meant" (#17987)
+            add barrier=handrail (#18055)
+            add superroute (#17908)
+            add police=* preset (Non-public police facility) and warn about police=yes and police=* together with amenity=police (#17950)
+            add emergency=emergency_ward_entrance and warn about emergency_ward_entrance=* without emergency=emergency_ward_entrance (#17989)
+            warn about most used non-building-type building values (#17786)
+            warn about footway=crossing and cycleway=crossing on nodes (#18060)
+            restore display of tram when tagged together or overlapping with highway, handle light_rail the same as tram, i.e. draw on top of highway and don't warn about missing railway=crossing|level_crossing (#18070, #17022)
+        More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation,
+    </description>
+  </release>
   <release version="15238" date="2019-07-10">
     <description>
     medium enhancements

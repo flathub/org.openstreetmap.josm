@@ -211,7 +211,7 @@
         add category icons in imagery preferences, add tooltips and a box to filter the list (#16301)
         display dynamic imagery entries in sub menus when they have category not equal to photo (#17676, #17779) 
     medium enhancements
-        mapcss: 4 new operators: ⊆,⊈,⊇,⊉ (#10391) 
+        mapcss: 4 new operators: &#8838;,&#8840;,&#8839;,&#8841; (#10391) 
     minor enhancements
         allow to define exceptions to the list of forbidden terms, through upload.comment.exception-terms property (#17634)
         Remove google from default list of forbidden terms. Useful for DWG. (#17634)
@@ -228,7 +228,7 @@
         Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
             don't warn about arrows as unusual Unicode character (#17667)
             don't warn about duplicate address if they have different addr:suburb (#17674)
-            warn about even more descriptive names: name=school|école|Школа|parc|park (#17633)
+            warn about even more descriptive names: name=school|&#233;cole|&#1064;&#1082;&#1086;&#1083;&#1072;|parc|park (#17633)
             render tunnel=flooded like tunnel=culvert (#17693)
             add diameter and pressure to pipeline and penstock presets (#17694)
             improve crossing and contains (x inside y) validator tests (#12627, #14287, #14289, #17695)
@@ -370,10 +370,10 @@
         gpx download improvements (r14761, r14762)
         remember state of minimized docked panels when closing undocked panel (r14765, r14820)
         Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
-          add wiki documented denominations >500 uses (r14767, r14773)
+          add wiki documented denominations &gt;500 uses (r14767, r14773)
           don't warn about "customer is not a valid restriction value" (r14767, r14774)
           add crop=cereal (r14769)
-          fix typo in tidal generator preset: steam -> stream (r14780)
+          fix typo in tidal generator preset: steam -&gt; stream (r14780)
           warn about place without name, various amenity without name or without operator, mountain_pass and peak without ele, place_of_worship without denomination (r14798, r14799, r14818)
           allows multiple values in URL validator (r14803)
           deprecated amenity=sauna (r14804, r14815)

@@ -29,6 +29,50 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
 <releases>
+  <release version="15390" date="2019-09-30">
+    <description>
+      major enhancements
+
+          Display layer number in layer list, to ease using toggle layer shortcuts (#17221)
+
+      medium enhancements
+
+          Option to move multiple images at once (#11905)
+          Deselect and remove multiple images in the ImageViewerDialog (#18119)
+          Select next image after one was removed (#18130)
+          don't 'download along' already downloaded areas (#18116)
+
+      minor enhancements
+
+          Add method to get unique values in mapcss (#18085)
+          Show a notification if no notes can be downloaded (#18105)
+          support short date/time format in RTKLib .pos files (#18114)
+          don't warn about potentially deleted objects when using download along several times (#18118)
+          Show a notification if no notes can be downloaded (#18105)
+          convert recycling:metal to recycling:scrap_metal (#18147)
+          Allow splitting a connectivity/restriction relation with multiple via-ways (#18088)
+          DownloadAlong: "Download as new layer" button added (#18050)
+          disable "download as new layer" button instead of hiding it (#17310)
+          sort plugins by name in about panel, and display loaded version (#17505)
+          refresh relation member table connectivity after a change of member ways nodes (#13592)
+          Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+              add various airport validator rules (warn about iata and icao without aeroway=helipad or aeroway=aerodrome, warn about wrong iata and icao codes, warn about aeroway=helipad or aeroway=aerodrome without faa (info level, US only), warn about aeroway=helipad or aeroway=aerodrome without icao and iata (info level, US only and only if faa does not contain nunbers, which indicates small airports), warn about aeroway=runway without ref and surface (info level), enhance Helipad preset, #15107)
+              Improve "Way end node near other way" validator test (#18051, #18106)
+              Improve "Tag value contains non-printing character" warning text (#18079)
+              add icons for craft=metal_construction and craft=carpenter (#12575)
+              Improve unconnected ways test (check if barrier is between unconnected highways, don't ignore nodes which are only "connected" via a long detour (4 x mindist), don't report ways with different layer=* values, and more under the hood rework, #6102, #11778)
+              add additional transport modes in ConditionalKeys test (#18124)
+              warning for amenity=recycling without recycling:* (#18151)
+              convert recycling:metal to recycling:scrap_metal (#18152)
+              consider junction=circular like junction=roundabout (#18047)
+              add name context to translate "Parking" differently for cars/bikes (#18141)
+              OverlappingWays: exclude tourism=camp_site (#18163)
+              OverlappingWays: exclude indoor= (#15815)
+              prefer location=roof over location=rooftop, location over generator:location (#18153)
+              detect duplicated relations even if members order differ (#11388)
+              remove duplicate warning for unusual direction (#18148)
+    </description>
+  </release>
   <release version="15322" date="2019-08-26">
     <description>
       major enhancements

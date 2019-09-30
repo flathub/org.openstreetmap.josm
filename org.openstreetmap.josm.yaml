@@ -28,7 +28,7 @@ modules:
     buildsystem: simple
     build-commands:
         - install -D josm.sh /app/bin/josm
-        - install -D josm-snapshot-15322.jar /app/bin/josm.jar
+        - install -D josm-snapshot-15390.jar /app/bin/josm.jar
         - install -D org.openstreetmap.josm.desktop /app/share/applications/org.openstreetmap.josm.desktop
         - install -D org.openstreetmap.josm.appdata.xml /app/share/metainfo/org.openstreetmap.josm.appdata.xml
         - install -D org.openstreetmap.josm.png /app/share/icons/hicolor/512x512/apps/josm.png
@@ -41,13 +41,13 @@ modules:
         path: org.openstreetmap.josm.appdata.xml
 
       - type: file
-        url: https://josm.openstreetmap.de/export/15322/josm/trunk/linux/tested/usr/share/icons/hicolor/512x512/apps/org.openstreetmap.josm.png
+        url: https://josm.openstreetmap.de/export/15390/josm/trunk/linux/tested/usr/share/icons/hicolor/512x512/apps/org.openstreetmap.josm.png
         sha256: 2a12b004d0711bbc9052a11ddfa44dfb3417068ef451714b7728c155fd854457
 
       - type: file
-        url: https://josm.openstreetmap.de/export/15322/josm/trunk/linux/tested/usr/share/applications/org.openstreetmap.josm.desktop
+        url: https://josm.openstreetmap.de/export/15390/josm/trunk/linux/tested/usr/share/applications/org.openstreetmap.josm.desktop
         sha256: 939c9b4a3cce6fcefff2072da952d1ca0f9bccff028a267b01a28e3c9e2f8ea1
 
       - type: file
-        url: https://josm.openstreetmap.de/download/josm-snapshot-15322.jar
-        sha256: 31b8d0b5d58a67e944324dbf9336ebcadedf7a00a744e9fc815ce29d8deeccc4
+        url: https://josm.openstreetmap.de/download/josm-snapshot-15390.jar
+        sha256: 2eed8068b80ea6cb4f3d91d10eec9dee4f0b58cfbbdeb735099234594763b6f3

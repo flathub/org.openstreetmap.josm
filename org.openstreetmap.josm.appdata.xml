@@ -28,7 +28,57 @@
   <url type="homepage">https://josm.openstreetmap.de</url>
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
-<releases>
+  <releases>
+    <release version="15492" date="2019-11-02">
+      <description>
+        major enhancements
+
+          Allow zoom in TMS layer up to 24 (#18064)
+          Drop remote control https support (no longer needed, #10033, #15748, #17097)
+          Add GeoJSON import, with limited support of named CRS (#10564, #17495)
+
+        medium enhancements
+
+          Catch impossible angles in highways (#18127)
+          Highlight affected relation members in role validation warnings (#14253)
+          Simplify track during GPX layer -> data layer conversion (#2760, #18248)
+          Improve performance of "Upload selection" checks (#13890) and "Unconnected highways" test (#18228)
+          Add icons to preset "check"s (#13015)
+          Add new Mode menu, listing map modes (#12662)
+
+        minor enhancements
+
+          Disable upload and save buttons when not needed (#12669)
+          Set the default system of measurement based on current country (r15395)
+          Create track segment names from gpx layer name if there is no 'name' attribute present in the actual gpx (#18012)
+          Handle "resource:" URLs identical for cached files and images (#18190)
+          Check that validation autofix works as expected (#14424)
+          Display GPX creator field in GPX layer info component (r15421)
+          Presets: verify that wiki links are no redirect (#17240)
+          Adapt 'Merge' button text to 'Merge layer' and 'Merge selection' actions (#18216)
+          make layer numbering an expert feature, configurable with layerlist.display.numbers advanced preference (#17221)
+          Don't set download bounds for Overpass queries (as these are usually incomplete datasets) except if the query is empty or just a comment. (#18122)
+          Allow unknown xml attributes to be added as tags (#18249)
+
+        Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+
+          add shop=pet_grooming, deprecate shop=dog_grooming (#18154)
+          add shop=e-cigarette (#18238)
+          add ice_road=yes and winter_road=yes (#18205)
+          add aerialway=zip_line (#18206)
+          add barrier=cable_barrier (#18233)
+          remove legacy tags from stop position preset (#18209)
+          fix accepted power route roles (#18219)
+          warn about railway:switch=* without railway=switch (r15433)
+          warn about suspicious highway=* construction=* combinations (#18203, #18246)
+          exclude oneway=reversible from odd number of lanes check (#18185)
+          don't warn about "Combined foot- and cycleway without segregated" in case of foot=use_sidepath or bicycle=use_sidepath (#18183)
+          don't warn about unconnected waterway=ditch (#16334)
+          don't warn about unconnected highway=elevator (#18247)
+          deprecate tower:type=anchor|suspension and pole:type=anchor|suspension in favor of line_attachment=anchor|suspension (#17984)
+          warn about wikipedia:lang tags with URL encoded values (#15473)
+    </description>
+  </release>
   <release version="15390" date="2019-09-30">
     <description>
       major enhancements

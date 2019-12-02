@@ -29,6 +29,53 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
   <releases>
+    <release version="15553" date="2019-12-02">
+      <description>
+        major enhancements
+
+          New language Marathi (#18285)
+          Rework of GPX track colors / layer preferences (#16796)
+            Reading and writing of colors in *.gpx files
+            Multiple colors per GPX layer supported (each track can have an individual color)
+            Support of Garmin track extensions
+            Saving of layer specific preferences in the GPX file instead of global preferences
+            Conversion of track and segment related fields/tags between GPX and OSM
+            Editing of GPX track color, name and description possible without prior conversion to OSM
+
+        minor enhancements
+
+          Remove language Canadian English (#17380)
+          More robust parsing of GeoJSON coordinates (#18287)
+          Add name:ko-Latn|ja_rm|sr-Latn|zh_pinyin|ja_kana|ja-Latn|ja-Hira to the list of known language codes (#18284)
+          Better handling of smooth scrolling in case of long distances and overlapping scrolls (r15511)
+          Make sure "Upload selection" is always enabled if required after data change event (#18296)
+          Improve performance when incomplete multipolygon is updated (Ctrl+Shift+B) (#18341)
+          Registers opening *.geojson files on macOS (#18350)
+
+          Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+
+            Warn if incomplete multipolygon relation (MP) was modified (#18240)
+            Perform check for crossing ways for all complete ways of the MP (#18240)
+            Throw warning for natural=water without water (#18297)
+            Ignore railway=platform from UnconnectedWays test (#18294)
+            Handle level tag like layer in CrossingWays test (#18293)
+            Handle noexit tag in UnconnectedWays test for railways too (#18299)
+            Allow the role hail_and_ride in route=bus|trolleybus relations (#18324)
+            Don't warn about missing segregated if bicycle=dismount is used (#18331)
+            Replace pipeline=marker by marker=* preset and add related validator rules (#18267)
+            Add shop=weapons (#18310)
+            Warn about manhole=unknown, manhole=plain and manhole=yes and don't warn about manhole=plain looks like manhole=drain (#18334)
+            Don't render man_made=embankment pattern on both sides when used on highway/railway/waterway (#18343)
+            Deprecate barrier=embankment in favor of man_made=embankment (#17643)
+            Add waterway=tidal_channel, little reorder in the waterway preset menu (#18128)
+            Add shop=scuba_diving (#18337)
+            Add tourism=camp_pitch, camp_site icon adjusted (#18356)
+            Fix list of wikipedia language prefixes (#18360)
+            Don't warn about service=slipway (#12771)
+            Add leisure=hackerspace (#18366)
+            Don't warn about missing recycling:*=* tag for recycling_type=centre. (r15552)
+      </description>
+    </release>
     <release version="15492" date="2019-11-02">
       <description>
         major enhancements

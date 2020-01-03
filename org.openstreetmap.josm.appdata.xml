@@ -29,6 +29,36 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
   <releases>
+    <release version="15628" date="2020-01-01">
+      <description>
+        major enhancements
+
+          Improved performance of "Combine way" and "Parallel ways" map mode (#18368)
+
+        minor enhancements
+
+          Add national Taginfo instances (#18302)
+          Allow users to automatically get the source tags (#18429)
+          Advanced options to disable autocomplete in add tags dialog (properties.autocomplete-keys / properties.autocomplete-values, #18401)
+          Don't require a restart when a Tagging Preset is added/removed (#18381)
+          Add trim_list mapCSS function (#18408)
+          Dynamic width update of layer number column (#18329)
+          More helpful error message when loading an invalid gpx file (#18397)
+          Add expert option gui.start.animation to disable the shining star animation displayed during the end-of-the-year period (#18431)
+          Allow plugins to remove a test they added (#18441)
+
+        Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+
+          Add 27 new SVG icons (#15240)
+          Add building=allotment_house (r15580), building=toilets (r15601)
+          Add wiki documented cuisine values (#18430)
+          Improve highway=elevator preset (#18392)
+          Reduce natural=water check level to info (#18394)
+          Ignore amenity=mobile_money_agent (r15570), man_made=clearcut (r15594), construction=minor (#18464), keys ending by :wikidata or :wikipedia (#18472)
+          Warn about railway=construction without construction tag (#18411)
+          More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation, see SVN log messages of milestone 19.12
+      </description>
+    </release>
     <release version="15553" date="2019-12-02">
       <description>
         major enhancements

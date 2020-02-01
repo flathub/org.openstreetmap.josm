@@ -29,6 +29,88 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
   <releases>
+    <release version="15806" date="2020-02-01">
+      <description>
+        major enhancements
+
+          Reimplement Tag2Link plugin in core and improve it (obtain formatter URL from Wikidata and OSM Wikibase, improve handling for several selected object)
+
+        medium enhancements
+
+          Double click sliders to reset opacity/colorfulness/gamma/sharpness
+          Allow to show user name in title bar
+          Split Way: smart way selection: if only one highway/railway/waterway is applicable, use that one
+          AutoFilter: infer sensible default values for key layer
+
+        minor enhancements
+
+          Add icons to move up/down/left/right actions
+          Add support for Tasking Manager 4 GPX URL
+          Display GPX colors in layer dialog with a circle
+          Make all changeset actions and dialogs only accessible in expert mode
+          Reuse Help shortcut inside tag/membership dialog
+          GPX layers uses the name from the file instead of "Downloaded GPX Data" whenever possible
+          Disable Window menu when empty, display changeset toggle dialog entry in the window menu only in expert mode
+          Upload dialog: support validator and notes layers as source tag
+          Add new imagery categories "elevation" and "qa"
+          Fix timezone in ImageViewerDialog
+          Use correct primitive icons in validator dialog
+          Don't combine ways when the shared node is old and outside of the download area.
+          Don't show way directions for boundary and multipolygon relations
+          Notify users of viewport following activation by shortcut
+          Relation member conflict: render decision as radio buttons
+          MapCSS: add settings of type string/double
+          Relation editor: compute wayConnection for type=superroute
+          LayerListDialog: show imagery offset in tooltip, re-enable previous offset on click
+          WMS: support time={time} for Sentinel-2 imagery
+          History Viewer: allow to select/copy multiple values
+          Relation editor: invert color of icons when line is selected
+          Advanced object info: use consistent coordinates/bbox format
+          Advanced Preferences: support search keywords "modified", "default", "changed"
+          Discourage upload of geojson data
+          Improve performance of parent ways/relations download
+          Fix loading of SVG images in internal help browser
+          Use the correct console encoding on Windows
+          Update EU boundaries after Brexit
+
+        Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+
+          Deprecate office=administrative in favour of office=government
+          Detect highway=crossing without crossing=* (info level)
+          Deprecate landuse=churchyard
+          More precise internal border between Germany and Switzerland
+          Detect objects not matching their presets object type (info level)
+          Add route=running and route=fitness_trail
+          Add more values for "material"
+          Warn if collection_times is used instead of opening_hours on amenity=recycling, rewording in preset
+          Add railway=construction preset
+          Warn about railway=construction or highway=construction together with construction=yes
+          Add kerb=* to crossing and traffic signals preset, warn about barrier=kerb together with kerb=no, warn about kerb=unknown, warn if barrier=kerb and kerb=* are used on isolated nodes, warn if barrier=kerb is used on highway=crossing as part of a major road and suggest kerb=* instead, deprecate sloped_curb=* in favor of kerb=*
+          Add craft icons: gardener, shoemaker, upholsterer
+          type / lamp_mount to street_lamp preset
+          "Relation type is unknown" Lower severity from WARNING to OTHER
+          Add amenity=dive_centre
+          Don't warn crossing administrative and protected_area boundaries, check also complete members of incomplete relations
+          Don't warn about bollard=unremovable looks like bollard=removable
+          Add validation rules for French telecom references
+          Add landuse=flowerbed, render landuse=school
+          Detect crossings between barrier/building, barrier/highway, barrier/railway, and barrier/waterway
+          Add gaelic_games:handball check to Gaelic Games preset
+          Deprecate unnamed=yes in favor of noname=yes
+          Add guidepost role to more route relation presets
+          Add isced:level to education presets
+          Warn about highway=cycleway|footway|path together with segregated=no and sidewalk=left|right|both and warn about values of segregated other than yes|no
+          Support duration as restriction-type in conditional syntax validator test
+          Download window Bounding Box tab: place text fields in diamond pattern
+          Autofix building=other|unclassified|undefined|unknown|unidentified to building=yes
+          Deprecate bicycle:oneway in favor of oneway:bicycle
+          Deprecate building:height and building:min_height in favor of height and min_height
+          Add route=share_taxi and duration to route preset
+          Don't warn about missing boundary tag if disused:boundary is present
+          Add building=fire_station to building preset
+          Ignore duration, interval, change:lanes, change:lanes:forward and change:lanes:backward in "value looks like..." validator test 
+      </description>
+    </release>
     <release version="15628" date="2020-01-01">
       <description>
         major enhancements

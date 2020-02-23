@@ -11,7 +11,7 @@
     JOSM is an extensible off-line editor for ​OpenStreetMap (OSM) written in ​Java.
     </p>
     <p>
-    It supports loading stand-alone GPX tracks and GPX track data from the OSM database as well as loading and 
+    It supports loading stand-alone GPX tracks and GPX track data from the OSM database as well as loading and
     editing existing nodes, ways, metadata tags and relations from the OSM database.
     </p>
   </description>
@@ -29,6 +29,45 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
   <releases>
+    <release version="15915" date="2020-02-23">
+      <description>
+        major enhancements
+          Restore access to Maxar imageries
+          Add links to Geofabrik regional/national Taginfo instances
+          Improve Autofilters: display the active rule/key, support numeric value with units, support 0.5 steps for level and add new keys: building:levels, gauge, frequency, incline, lanes, admin_level
+          Add tag and change value dialogs: use matching preset/mappaint style icons on the okay button
+
+        medium enhancements
+          Reduce memory footprint
+          Download object: improve performance and behavior
+          Join areas: improve performance and behavior
+
+        minor enhancements
+          Add compatibility with Java 14
+          Update to overpass-wizard 0.0.9
+          Separate unique identifiers per primitive type (This allows to easily update .osm files with negative ids across multiple sessions, such as internal JOSM boundaries file.)
+          Fix DownloadAlong with locked layers
+          Add "download" and "locked" status to osm data layer info
+          Scroll through TabPreferenceSetting using mouse wheel
+          Tag2Link: support leading zeros for ref:bag
+          Add Tag Dialog: disable auto completion during use of recent tags
+          Registers *.geojson, *.jos, *.joz files on all platforms
+
+          Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+
+          Update opening_hours.js
+          Match cycleway:left and cycleway:right on Cycle Lane/Track preset too
+          Don't warn about the key to on route=ferry ways
+          Same support for oneway:bicycle=no as for cycleway=opposite
+          Extend route=ferry preset
+          Warn about highway=* + construction=yes
+          Validator: whitelist a few phonetic characters
+          Change car to motorcar in amenity=charging_station preset, add a validator warning and add motorcycle=*
+          Add leisure=outdoor_seating
+          Add payment:contactless to payment preset
+          Add vehicle combo to highway=track preset
+        </description>
+      </release>
     <release version="15806" date="2020-02-01">
       <description>
         major enhancements

@@ -29,7 +29,7 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
   <releases>
-    <release version="15915" date="2020-02-23">
+    <release version="15937" date="2020-02-23">
       <description>
         major enhancements
           Restore access to Maxar imageries

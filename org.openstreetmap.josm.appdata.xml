@@ -23,12 +23,82 @@
   <content_rating type="oars-1.1"/>
   <launchable type="desktop-id">org.openstreetmap.josm.desktop</launchable>
   <screenshots>
-    <screenshot type="default" width="1024" height="576">https://josm.openstreetmap.de/svn/trunk/linux/josm-screenshot.png</screenshot>
+      <screenshot type="default" width="1024" height="576">https://josm.openstreetmap.de/svn/trunk/native/linux/josm-screenshot.png</screenshot>
   </screenshots>
   <url type="homepage">https://josm.openstreetmap.de</url>
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
   <releases>
+    <release version="16238" date="2020-02-23">
+        <description>
+          major enhancements
+            #18856 - Add Arabic language
+
+          medium enhancements
+            #18856 - Add support for Eastern Arabic(-Indic) and Khmer numerals
+
+          minor enhancements
+            #18596 - Fix relation ordering after split-way
+            #14965 - Sort Autofilter tags alphabetical
+            #18810 - Validator dialog shows the test that produced the message in the tool tip
+            #18818 - Download from OSM along selected ways: allow value lower than 10 [meters]
+            #18796 - Make Validator work correctly after upload
+            #18835 - Download members: don't perform a full recursive download of children relations, i.e. only way and node members are completed
+            #18835 - Make Cancel button work while relation members were downloaded
+            #13805, #17737 - Improve progress bar of validator
+            #18870 - DownloadAlongAction: suppress multiple requests dialog for only one server request in DownloadAlong
+            #18885 - AdvancedChangesetQueryPanel: select checkbox/radio-button when clicking its label
+            #18658 - Don't create empty validator layer
+            #18619 - Upload dialog: add border, reorder summary
+            #18649 - Imagery menu: Do not create category submenu with only one entry
+            #18919 - Allow to sort tables in changeset manager
+            #18918 - Enable Ctrl-H shortcut to display history of primitives selected in changeset manager
+            #17285 - Add privacy-policy-url to imagery schema
+            #17683 - LoadAndZoomHandler: retain order of selection
+            #15931 - Add a preference to use external browser instead of the Help Browser
+            #18692 - Show Duplicate relation in context menu
+            add MapCSS conversion functions: to_boolean, to_byte, to_short, to_int, to_long, to_float, to_double
+            #18990 - Reenable Join Node To Way when way is the same one that the node belongs to
+            #18985 - Avoid to download parents of deleted (invisble) objects
+            #18979 - Improve display of PrimitiveIds
+            #18993 - Allow to clone a locked dataset
+            #15232 - Upload dialog: Advanced preference upload.show.review.request to disable request feedback checkbox
+            #18429 - Upload dialog: Advanced preference upload.show.automatic.source to disable automatic source retrieval UI
+
+        Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+            #16707 - Improve highlighting of overlapping areas and "zoom to error"
+            #18744 - Improve "Join Overlapping Areas" behavior
+            #13165 - Improve overlapping multipolygons test
+            #17629 - Don't warn about name=mairie|rathaus
+            #9895 - Warn about values of noexit other than yes
+            #12575 - Add icon for craft=blacksmith
+            #16707 - Warn about overlapping connected buildings
+            #18817 - Warn about marker as member of underground pipeline or cable
+            #18765 - Don't warn about two single values of direction (direction=90;270) and combination of ranges and single values (direction=45-100;190-250;300)
+            #18819 - Deprecate exit_to=* in favor of destination=*
+            #18140 - Switch to OpeningHoursParser
+            #18741 - Tag checker: report codepoint of unusual Unicode character
+            #12914, #18552, #18640 - Move out French-specific rules to external France specific rules
+            #15240 - Change Potlatch icon to svg
+            #18868 - Add segregated check box to path/footway/cycleway preset
+            #18935 - Add "ele" for internal preset natural=water
+            #18937 - Add "water area inside water area" check
+            #18951 - Deprecate water=riverbank in favor of water=river
+            #18969, #18964 - Improve performance of validator checks
+            #18863 - Split ways: avoid false positive warnings about missing members
+            #18740 - Tag checker: whitelist a few phonetic characters
+            #19014 - Don't warn about junction=* on area:highway
+
+        Rework "under the hood"
+            #16860 - Setup Apache Ivy
+            #18140 - Switch to OpeningHoursParser
+            #18845 - Reorganization of data, images, styles, IDE and native files in a more practical file tree
+            #18802 - Refactor and optimizations: MapCSS
+            #18864 - Refactor and optimizations: Tagging Presets
+            #18896 - Refactor and optimizations: ImageryInfo
+            #18886 - Refactor and optimizations: OsmReader 
+        </description>
+    </release>
     <release version="15937" date="2020-02-23">
       <description>
         major enhancements

@@ -29,6 +29,7 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
   <releases>
+    <release version="16731" date="2020-07-02" />
     <release version="16238" date="2020-02-23">
         <description>
           major enhancements

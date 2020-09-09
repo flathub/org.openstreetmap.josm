@@ -29,6 +29,82 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
   <releases>
+    <release version="17013" date="2020-09-07">
+        <description>
+          major enhancements
+            #18235 - New language Serbian with Latin script
+            #15441 - Display GPX routes as separate layer (like markers)
+            #15240 - Convert all remaining core PNG icons to SVG (except Potlatch2 mappaint style icons)
+            #19027 - Dark mode available via the new plugin FlatLaf
+
+          medium enhancements
+            #19248 - Allow to toggle offline mode in the file menu ("Work Offline...")
+            #19400 - Remote control: generate OpenAPI specification
+            #18919 - Changeset Manager: sort tables
+            #19574 - Add a color setting for MapCSS
+            #10488 - GpxLayer: jump to previous/next segment
+            #17836 - Download along several GPX tracks at once
+            #19633 - In the relation editor show links as expected for route relations with split start
+            #3450 - Download dialog: confirm download bounds outside current map view
+            #4888 - Download dialog: show map scale
+            #19692 - Zoom mode: zoom in/out depending on rectangle
+            #19624 - Support reading line-delimited GeoJSON (RFC 7464)
+            #19632 - GeoJSONWriter: write key={value} as JSON object
+            #19717 - Avoid unwanted text control characters in HiDPI
+            #19716 - ChooseTrackVisibilityAction: fix sorting by timespan, do not report unspecified timespan as 1970-01-01
+            #8334 - Add advanced option to scale the table font (Advanced preference keys gui.scale.table.*)
+            #8334 - Add advanced option to scale the list font (Advanced preference key gui.scale.list.font)
+            #19732 - Preferences: open previously selected preference tab
+            #14200 - Warn when moving elements by a large distance
+
+          minor enhancements
+            #19437 - OpenBrowserAction: make warning threshold of browser windows configurable (Advanced preference key warn.open.maxbrowser)
+            #19620 - Tag2Link: allow to customize sources
+            #18555 - Tag2Link: make search engine configurable (Advanced preference key tag2link.search)
+            #19622 - Tag2Link: show icons based on presets/styles
+            #19316 - Don't show a warning when a new relation is deleted
+            #12484 - Disable inappropriate AdvancedPreference actions (Edit requires exactly one selected row. Reset requires at least one selected row.)
+            #19669 - Add help buttons to more dialogs
+            #8227 - MarkerLayer: allow to customize marker size/stroke (Advanced preference keys draw.rawgps.markers.size, draw.rawgps.markers.stroke)
+            #19699 - Download dialog: left align, improve spacing, add icons to source and "Zoom to downloaded data" checkboxes
+            #7638 - Download dialog: add status bar with lat/lon of mouse cursor and selected download area (for experts)
+            #19705 - MapView: render turn restrictions in HiDPI
+            #19706 - Selection/Relation list: render primitive icons in HiDPI
+            #13586 - Preferences: do not update source entries automatically when --offline=CACHE_UPDATES
+            #19731 - Imagery Preferences: move reload button next to activate button
+            #19510 - Add "Zoom to layer" in context menu of layers in the Layers panel
+            #19736 - MapStatus: display localized SystemOfMeasurement name
+            #19754 - Tag2Link: support multi-values for wikimedia_commons
+            Fix offset of embankment/barrier patterns, which led to unpredictable rendering
+
+          Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+            #19579 - Don't warn about unknown values of generator:output:electricity and plant:output:electricity
+            #19589 - Don't warn about duplicate housenumbers if one is tagged on a barrier=entrance or barrier=gate node
+            #19604 - Warn if the value of alt_name is the same as of name
+            #19570 - Move hangar outside aeroway warning to external France specific rules
+            #18899 - OpeningHoursParser: allow to specify strictness in preferences
+            #19646 - Enhance bunker preset, add bunker value also to building preset
+            #19660 - Improve warning text for unnecessary area=yes warning
+            #17633 - Remove double warning for one object in some cases (e.g. name=school + building=school + amenity=school), avoid cases like solely building=school (without amenity=school) after autofix
+            #19650 - Do not warn about incline on leisure=slipway
+            #19609 - Adjust lanes warnings
+            #11541 - Add wikidata textbox below every wikipedia textbox in all internal presets and warn if a wikipedia value looks like a wikidata value
+            #19641 - Add shop=second_hand, change icon of shop=charity
+            #19714 - Add rendering of right side of barrier=city_wall, add two_sided=yes checkbox to barrier=city_wall preset, warn if barrier=city_wall way is reversed
+            #19720 - Fix lift_gate:type dropdown list
+            #19718 - Add level=* to emergency=defibrillator preset, reorder preset
+            #19726 - Update OSM wiki object type icons
+            #18934 - Fix rendering of leisure=amusement_arcade and leisure=adult_gaming_centre
+            #19713 - Add junction=circular and remove default oneway arrows in case of oneway=no; add preset links between roundabout, mini-roundabout and circular junction
+            #19742 - Warn about much likely wrong direction tag on highway=mini_roundabout, remove icon for solely direction=clockwise tag
+            #19760 - Don't warn about unusual unicode character ɗ and Ɗ
+            Remove unneeded white background from a few icons
+            Add level values in the presets, don't sort values of level and layer in presets
+            Add irrigation=pivot to farmland preset
+
+          More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation, see SVN log messages of milestone 20.08
+        </description>
+    </release>>
     <release version="16731" date="2020-07-02" />
     <release version="16238" date="2020-02-23">
         <description>

@@ -29,6 +29,48 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
   <releases>
+    <release version="17084" date="2020-10-05">
+        <description>
+            medium enhancements
+                #19833 - Remove duplicated nodes before creating an OSM way during GeoJSON import
+                #19830 - Proper update way length indicator in statusbar after various actions 
+            minor enhancements
+                #19786, #19726, #19808, #19820, r17032, r17034, r17036, r17060, r17061 - Add missing icons and change some icons
+                #19789, #19793 - Fix memory leaks
+                #19836, #19850 - Add possibility to add a shortcut for more actions and toggle dialogs
+                #19353 - Fix "Relation member must be part of the same dataset as relation" bug
+                #19813 - Fix selection of Multiselect presets
+                #19794 - LatLonDialog: restore return by Enter key
+                #19532 - Fix "Cannot modify the id counter backwards" bug
+                #19493 - Fix performance problem when switching between mappaint styles and wireframe view 
+            Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+                #18866 - Update to latest and probably last version of Potlatch2 mappaint style
+                #19739 - Add natural=sinkhole, deprecate natural=sink_hole
+                #12575 - Add icon for craft=brewery, craft=winery, craft=handicraft and craft=caterer
+                #19782 - Fix spelling of climbing keys containing UIAA to uiaa, add validator warnings
+                #19714 - Don't complain about direction reversal in case of two_sided=yes
+                #19769 - Fix validator warning messages
+                #19747 - Warn about electrified=no together with voltage or frequency on railway ways, add frequency=25 to presets
+                #19747 - Fix sorting of frequency values in presets
+                #19759 - Add emergency=suction_point
+                #19797 - Add man_made=pumping_station
+                #19597 - Improve validator performance when validating complex multipolygons
+                #19796 - Add more optional values to the presets of runway, taxiway, apron and helipad
+                #19821 - Don't warn about oneway on leisure=track
+                #19835 - Deprecate cuisine=bbq (case insensitive) in favor of cuisine=barbecue
+                #19572 - Add more warnings about lanes and surface on suspicious objects
+                #19603 - Warn about suspicious tag combinations with footway=*
+                #19672 - Add amenity=monastery, historic=monastery and building=monastery
+                #19828 - Remove cycleway:left|right=opposite_lane|opposite_track|opposite, add cycleway=separate and cycleway:left|right=separate
+                #19431 - Add amenity=language_school
+                #18336 - Add shop=fishing
+                #18338 - Add shop=chocolate
+                #18335 - Add shop=herbalist
+                #17138 - Add shop=swimming_pool
+                Add entrance=garage 
+            More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation, see SVN log messages of milestone 20.09
+        </description>
+    </release>
     <release version="17013" date="2020-09-07">
         <description>
           major enhancements
@@ -104,7 +146,7 @@
 
           More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation, see SVN log messages of milestone 20.08
         </description>
-    </release>>
+    </release>
     <release version="16731" date="2020-07-02" />
     <release version="16238" date="2020-02-23">
         <description>

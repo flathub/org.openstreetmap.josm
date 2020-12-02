@@ -29,6 +29,81 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
   <releases>
+    <release version="17329" date="2020-11-22">
+        <description>
+          major enhancements
+            #7548 - Re-organize the preference dialog
+            #19937 - New macOS bundle system, with Retina resolution, built-in Java runtime, and valid Apple software notarisation (no more scary warnings when opening!)
+
+          medium enhancements
+            #19745 - Preferences: add quick filter for styles/presets/rules
+            #19822 - GeoJSON: fix bugs with multipolygons
+            #18866 - The Potlatch2 style has been vectorised, and will look better on hiDPI / Retina displays. If you were using it, you need to re-enable it in View menu → Map paint styles → Map paint preferences
+            various performance improvements and memory leak fixes
+
+          minor enhancements
+            #19876 - Bug fixes for the preferences window
+            #19887, #19906 - Statusbar measurement view fixes
+            #19819 - Improvements for dark modes
+            #18721 - PropertiesDialog: improve "overwrite key" dialog
+            #18235 - Fix loading of the languages sr@latin and ca@valencia from external sources
+            #19851 - Fix shortcut names
+            #19920 - Make cancel work at "Download All Children"
+            #19951 - Show "Multipolygon is not closed" message when new created relation doesn't contain any way
+            #19120, #19954 - Disable Shift shortcuts in text fields
+            #19976 - Add SWEREF99 TM (EPSG:3006) in default projection choices
+            #19993 - Handle multiline note comments in notes dialog
+            #19997 - Disable MapPaint style submenu for empty settings
+            #6529, #14620, #19438 - Fix bugs which could break data integrity
+            #19869, #19871, #19895 - Validator tests could not cope with locked (read-only) datasets
+            #20013 - Combine ways: suggest to adapt direction=forward/backward childnodes in case one of the ways needs to be turned
+            #19966, #20115 - Create Multipolygon: Fix bug that could block JOSM if multipoly.show-relation-editor is true
+            #20096 - Restore comment initialization from dataset changeset hashtags if specified through remote control (regression from recent upload dialog changes)
+            #20026 - Fix tooltip for Date/time in gpx filter dialog
+            #20018 - Disable repaint timer when no animation extension is enabled
+            #20099 - Make sure "OSM Server" preferences display a vertical scrollbar if needed
+
+         Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
+            #19743, #19879 - Update to OpeningHoursParser 0.22.1
+            #19506 - Avoid duplicate warnings on nodes connecting building and highway
+            #19581 - Disable the fix button for duplicated nodes in case there is no downloaded area
+            #17498 - Warn about bicycle=no and cycleway="something positive"
+            #17498 - Deprecate cycleway|cycleway:left|cycleway:right=none in favor of *=no
+            #19877 - Warn about emergency=defibrillator on a way
+            #16247 - Avoid false positives of "Node connects a power line or cable with an object which is not related to the power infrastructure." with multipolygons
+            #19304 - Add shop=frozen_food
+            #17646 - Add mobile and contact:mobile to the two contact presets
+            #17646 - Add preset with most common social networks
+            #19423 - Add amenity=animal_boarding and amenity=animal_shelter
+            #19907 - Don't autofix width=m to width= m (and similar cases)
+            #19907 - Adjust some numeric test to warn about cases with missing numbers after decimal separator (width=10'2." or maxheight=2. m), don't warn about values without inch (feet only)
+            #19907 - Remove foot/inch from maxweight/maxaleload numeric tests
+            #19907 - Avoid that the fix button of some numeric tests produces a still wrong value
+            #19862, #9257 - Remove controversial warning about unnecessary foot|bicycle=yes|designated together with highway=footway|pedestrian|cycleway
+            #17809 - Don't promote spelling FIXME, deprecate Fixme in favor of fixme
+            #19909 - Don't warn about "Way end node near other way" if a power line ends with location:transition=yes
+            #19787 - Add building=tent
+            #19917 - Don't warn about nodes with role house without housenumber but with nohousenumber=yes in associated street relations
+            #19930 - Downgrade warning about oneway on waterway to info level for navigable waterways
+            #19949 - Improve warning message for sidewalk=yes
+            #19980 - Warn about highway=livingstreet together with maxspeed>20 or maxspeed>15 mph
+            #19981 - Warn about closed power=line way
+            #19987 - Fix false positive unconnected ways warning for ways ending at ferry terminal
+            #19967 - Add leisure=bleachers and building=grandstand
+            #14964 - Add residential=apartments|rural|urban
+            #19383 - Add line_management to power support presets, warn about line_management on ways, deprecate pole:type and power related tower:type values
+            #20001 - Add vending=water
+            #18266 - Warn about multiple values in telecom:medium
+            #19952 - Change sport drop down list to a multiselect
+            #20021 - Add holding_position:type
+            #20034 - Add building=gatehouse
+            #20022 - Do not warn about destination_sign relations with same members
+            #20119 - Don't warn about smoothness on barrier=kerb or kerb=*
+            Allow amenity=bar and highway=pedestrian as physical features for sport tags
+            Don't warn about maxspeed on waterway=tidal_channel|fairway
+            Don't warn about missing maxspeed on traffic_sign=maxspeed when conditional maxspeed is present
+        </description>
+    </release>
     <release version="17084" date="2020-10-05">
         <description>
             medium enhancements

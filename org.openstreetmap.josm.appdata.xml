@@ -29,6 +29,39 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
   <releases>
+    <release version="17428" date="2020-12-29">
+      <description>
+        minor enhancements
+          #20131 - Remote control: report errors in case of OSM API error (load_and_zoom) or no valid identifier (load_object)
+          #19825 - Display advanced preferences table on Java 8 also without search text
+          #20037 - Overpass query wizard: fix generating queries with "*=value"
+          #20091, #19783 - Adjust Downloading incomplete members
+          #20110 - Update multipolygon: don't strip natural=coastline from member ways
+          #12536 - Improve divider location of Conflict window
+          #18372 - Avoid text overflow in Notes description box
+          #20165 - Changset manager: Discussion tab: Improve sorting by date
+          #18533 - Changeset manager: Tags tab: Improve handling of column widths
+          #20163 - Split way: keep turn restriction intact if via way was split
+          #19098 - Properly update plugins after a crash of a plugin
+          #10205 - Adjust align nodes in circle behavior
+          various performance improvements and memory leak fixes
+
+        Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules
+          #20089 - Don't warn about railway=rail crossing railway=yard
+          #19465 - Make "Overlapping ways" less aggressive
+          #20019 - Warn about direction=forward/backward on invalid nodes
+          #20174 - Don't warn about "very long segment" for ways with boundary=*
+          #20187 - Don't warn about unclosed natural=earth_bank
+          #20193 - Warn about transformer=* on ways
+          #20117 - Warn about more abbreviated street names (Bnd for Bend, Cv for Cove, Trl for Trail, Xing for Crossing, Vw for View)
+          #20121 - Adjust handling of water objects in Crossing ways test
+          #20234 - Don't warn about unclosed natural=mountain_range
+          #20241 - Don't warn about icao and iata tags on aerodrome=heliport
+          #20031 - Don't warn about overlapping area:highway
+          #20307 - Don't warn about unknown values for keys ending with :maxstay
+          Add water=basin
+      </description>
+    </release>
     <release version="17329" date="2020-11-22">
         <description>
           major enhancements

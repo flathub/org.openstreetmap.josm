@@ -255,7 +255,7 @@
           More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation, see SVN log messages of milestone 20.08
         </description>
     </release>
-    <release version="16731" date="2020-07-02" />
+    <release version="16731" date="2020-07-02"/>
     <release version="16238" date="2020-02-23">
         <description>
           major enhancements
@@ -536,7 +536,7 @@
 
           Catch impossible angles in highways (#18127)
           Highlight affected relation members in role validation warnings (#14253)
-          Simplify track during GPX layer -> data layer conversion (#2760, #18248)
+          Simplify track during GPX layer -&gt; data layer conversion (#2760, #18248)
           Improve performance of "Upload selection" checks (#13890) and "Unconnected highways" test (#18228)
           Add icons to preset "check"s (#13015)
           Add new Mode menu, listing map modes (#12662)
@@ -756,7 +756,7 @@
         add category icons in imagery preferences, add tooltips and a box to filter the list (#16301)
         display dynamic imagery entries in sub menus when they have category not equal to photo (#17676, #17779) 
     medium enhancements
-        mapcss: 4 new operators: &#8838;,&#8840;,&#8839;,&#8841; (#10391) 
+        mapcss: 4 new operators: ⊆,⊈,⊇,⊉ (#10391) 
     minor enhancements
         allow to define exceptions to the list of forbidden terms, through upload.comment.exception-terms property (#17634)
         Remove google from default list of forbidden terms. Useful for DWG. (#17634)
@@ -773,7 +773,7 @@
         Add/improve/fix/change Internal Presets, Map Paint Style and Validation rules:
             don't warn about arrows as unusual Unicode character (#17667)
             don't warn about duplicate address if they have different addr:suburb (#17674)
-            warn about even more descriptive names: name=school|&#233;cole|&#1064;&#1082;&#1086;&#1083;&#1072;|parc|park (#17633)
+            warn about even more descriptive names: name=school|école|Школа|parc|park (#17633)
             render tunnel=flooded like tunnel=culvert (#17693)
             add diameter and pressure to pipeline and penstock presets (#17694)
             improve crossing and contains (x inside y) validator tests (#12627, #14287, #14289, #17695)
@@ -965,7 +965,7 @@
         More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation, see SVN log messages of milestone 19.01 
     </description>
   </release>
-<release version="14620" date="2018-12-31" >
+<release version="14620" date="2018-12-31">
     <description>
     major enhancements
         Fixed many memory leaks (#17040)
@@ -994,24 +994,24 @@
         More minor bug fixes, enhancements, stability improvements, translation updates, code improvements and code documentation, see SVN log messages of milestone 18.12     
     </description>
 </release>
-<release version="14460" date="2018-11-28" >
+<release version="14460" date="2018-11-28">
     <description>
     The height of each panel on the right side is saved when JOSM is closed.
     "Download as new layer" changed from a checkbox to an own button.
     </description>
 </release>
-<release version="14382" date="2018-10-28" >
+<release version="14382" date="2018-10-28">
     <description>
     Option to display object version in lists 
     </description>
 </release>
-<release version="14289" date="2018-10-02" >
+<release version="14289" date="2018-10-02">
     <description>
     Various enhancements for the correlation of images to gpx tracks 
     </description>
 </release>
 
-<release version="14178" date="2018-08-22" >
+<release version="14178" date="2018-08-22">
     <description>
     Display the language the abbreviation in name:xx keys stands for in the Tags/Membership dialog
     </description>

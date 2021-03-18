@@ -29,6 +29,7 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
   <releases>
+    <release version="17580" date="2021-03-17"/>
     <release version="17428" date="2020-12-29">
       <description>
         minor enhancements
@@ -119,7 +120,7 @@
             #19917 - Don't warn about nodes with role house without housenumber but with nohousenumber=yes in associated street relations
             #19930 - Downgrade warning about oneway on waterway to info level for navigable waterways
             #19949 - Improve warning message for sidewalk=yes
-            #19980 - Warn about highway=livingstreet together with maxspeed>20 or maxspeed>15 mph
+            #19980 - Warn about highway=livingstreet together with maxspeed&gt;20 or maxspeed&gt;15 mph
             #19981 - Warn about closed power=line way
             #19987 - Fix false positive unconnected ways warning for ways ending at ferry terminal
             #19967 - Add leisure=bleachers and building=grandstand

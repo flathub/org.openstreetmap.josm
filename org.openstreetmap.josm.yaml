@@ -27,11 +27,11 @@ modules:
   - name: josm-binary
     buildsystem: simple
     build-commands:
-        - install -D josm.sh /app/bin/josm
-        - install -D josm.jar /app/bin/josm.jar
-        - install -D org.openstreetmap.josm.desktop /app/share/applications/org.openstreetmap.josm.desktop
-        - install -D org.openstreetmap.josm.appdata.xml /app/share/metainfo/org.openstreetmap.josm.appdata.xml
-        - install -D org.openstreetmap.josm.png /app/share/icons/hicolor/512x512/apps/josm.png
+      - install -D josm.sh /app/bin/josm
+      - install -D josm.jar /app/bin/josm.jar
+      - install -D org.openstreetmap.josm.desktop /app/share/applications/org.openstreetmap.josm.desktop
+      - install -D org.openstreetmap.josm.appdata.xml /app/share/metainfo/org.openstreetmap.josm.appdata.xml
+      - install -D org.openstreetmap.josm.png /app/share/icons/hicolor/512x512/apps/josm.png
 
     sources:
       - type: file
@@ -49,8 +49,8 @@ modules:
         sha256: 8c1c5f615c361d3ab565ec740c6a1cee9d5d5804d764d700b18c1a46311f851a
 
       - type: file
-        url: https://josm.openstreetmap.de/download/josm-snapshot-17580.jar
-        sha256: 5cf377021c531f1b6c07a4dce5c8d3d463c7a09fc33694c1f6eb5a4a1179c117
+        url: https://josm.openstreetmap.de/download/josm-snapshot-17702.jar
+        sha256: f3569d896aba969c317aedeec3657df0824ee3bc4aa00c6cd1b9eb839a04f7dc
         dest-filename: josm.jar
         x-checker-data:
           type: html

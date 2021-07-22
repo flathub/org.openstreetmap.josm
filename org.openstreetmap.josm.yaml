@@ -18,6 +18,16 @@ build-options:
   env:
     JAVA_HOME: /usr/lib/sdk/openjdk11/
 modules:
+  - name: xgetres
+    buildsystem: simple
+    build-commands:
+      - make
+      - make install PREFIX=/app
+    sources:
+      - type: git
+        url: https://github.com/tamirzb/xgetres
+        commit: 7dd6aa2e3a469382ba09152710a5bb4abb3fbc9c
+
   - name: openjdk
     buildsystem: simple
     build-commands:

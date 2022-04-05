@@ -59,8 +59,8 @@ modules:
         sha256: 8c1c5f615c361d3ab565ec740c6a1cee9d5d5804d764d700b18c1a46311f851a
 
       - type: file
-        url: https://josm.openstreetmap.de/download/josm-snapshot-18387.jar
-        sha256: ce41166638d2cb46a31b95f5fdd2202cf67bcebd0189a24970768df2cbffdf27
+        url: https://josm.openstreetmap.de/download/josm-snapshot-18427.jar
+        sha256: 4aca1e29fa568b8d6c77becb7da416d0e7079f27fc88ba2529617be1d85a9696
         dest-filename: josm.jar
         x-checker-data:
           type: html

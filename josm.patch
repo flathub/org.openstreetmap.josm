@@ -1,0 +1,62 @@
+--- a/josm	2022-05-23 07:30:48.000000000 -0600
++++ b/josm	2022-05-23 07:34:52.000000000 -0600
+@@ -4,7 +4,7 @@
+ 
+ # First, the alternative (if known to work) or users preference as defined by $JAVA_HOME. Next, use OpenJDK.
+ # Override to a specific one using $JAVACMD
+-ALTERNATIVE_JDK=$(readlink -n -f /etc/alternatives/java)
++ALTERNATIVE_JDK=$(readlink -n -f /etc/alternatives/java || echo "")
+ 
+ # Let's get the current architecture -- needed for multiarchified Java
+ ARCH=$(dpkg --print-architecture 2> /dev/null || true)
+@@ -12,6 +12,7 @@
+ JAVA_CMDS="$JAVA_HOME/bin/java"
+ 
+ # If OpenJDK is only available headless, do not try it
++if [[ ! -z "$(which dpkg)" ]]; then
+ if dpkg --get-selections "openjdk-*-jre" | grep install$ > /dev/null \
+ || dpkg --get-selections "openjdk-*-jre:$ARCH" | grep install$ > /dev/null ; then
+ 	# LTS versions in decreased order
+@@ -29,6 +30,7 @@
+ 	# Development version(s)
+ 	JAVA_CMDS="${JAVA_CMDS} /usr/lib/jvm/java-18-openjdk/bin/java /usr/lib/jvm/java-18-openjdk-$ARCH/bin/java"
+ fi
++fi
+ # Undetermined version
+ JAVA_CMDS="${JAVA_CMDS} /usr/lib/jvm/default-java/bin/java /usr/bin/java"
+ 
+@@ -56,6 +58,23 @@
+     done
+ fi
+ 
++function updateHiDPI() {
++  # Java2D and Swing APIs use Xlib and support HiDPI via GDK_SCALE var
++  # http://hg.openjdk.java.net/jdk9/jdk9/jdk/rev/bc2d1130105f#l27.8
++  GDK_SCALE=1
++  is_natural_number='^[0-9]+$'
++  DPI=`xgetres Xft.dpi`
++  # if $DPI is a natural number, taken from https://stackoverflow.com/a/806923
++  if [[ $DPI =~ $is_natural_number ]] ; then
++     # float division in bash, taken from https://stackoverflow.com/a/21032001
++     SCALE=`echo "$DPI 96" | awk '{printf "%.1f \n", $1/$2}'`
++     # Round in bash, taken from https://stackoverflow.com/a/26465573
++     GDK_SCALE=$(LC_ALL=C printf "%.0f\n" $SCALE)
++  fi
++
++  export GDK_SCALE
++}
++
+ if [ "$JAVACMD" ]; then
+     echo "Using $JAVACMD to execute josm." || true
+     if [[ "${JAVACMD}" =~ 'java-9' ]] || [[ "${JAVACMD}" =~ 'java-10' ]]; then
+@@ -68,7 +87,8 @@
+     fi
+     set +e
+     while true; do
+-        $JAVACMD $JAVA_OPTS -jar /usr/share/josm/josm.jar "$@"
++        updateHiDPI
++        $JAVACMD $JAVA_OPTS -jar /app/bin/josm.jar "$@"
+         if [ "z$?" != "z9" ]; then
+             break
+         fi
+

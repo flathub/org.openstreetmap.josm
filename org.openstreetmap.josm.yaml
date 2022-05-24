@@ -54,10 +54,20 @@ modules:
       - type: file
         url: https://josm.openstreetmap.de/export/18402/josm/trunk/native/linux/tested/usr/share/applications/org.openstreetmap.josm.desktop
         sha256: e3da3e4075f9ca804cd1f7c077a60689016247d4de64d0b046311a537c24e51a
+        x-checker-data:
+          type: html
+          url: https://josm.openstreetmap.de/browser/josm/trunk/native/linux/tested/usr/share/applications/org.openstreetmap.josm.desktop
+          version-pattern: /changeset/(\d+)/josm/trunk/native/linux/tested/usr/share/applications/org.openstreetmap.josm.desktop
+          url-template: https://josm.openstreetmap.de/export/$version/josm/trunk/native/linux/tested/usr/share/applications/org.openstreetmap.josm.desktop
 
       - type: file
-        url: https://josm.openstreetmap.de/export/18454/josm/trunk/native/linux/tested/usr/bin/josm
+        url: https://josm.openstreetmap.de/export/18297/josm/trunk/native/linux/tested/usr/bin/josm
         sha256: fc2cb0438438d54f42720834bef69cda53f3074520e6f70d7f3c98f289d5608c
+        x-checker-data:
+          type: html
+          url: https://josm.openstreetmap.de/browser/josm/trunk/native/linux/tested/usr/bin/josm
+          version-pattern: /changeset/(\d+)/josm/trunk/native/linux/tested/usr/bin/josm
+          url-template: https://josm.openstreetmap.de/export/$version/josm/trunk/native/linux/tested/usr/bin/josm
 
       - type: patch
         path: josm.patch
@@ -71,3 +81,4 @@ modules:
           url: https://josm.openstreetmap.de/tested
           version-pattern: (\d+)
           url-template: https://josm.openstreetmap.de/download/josm-snapshot-$version.jar
+          is-main-source: true

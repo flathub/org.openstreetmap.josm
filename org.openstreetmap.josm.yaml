@@ -61,8 +61,8 @@ modules:
           url-template: https://josm.openstreetmap.de/export/$version/josm/trunk/native/linux/tested/usr/share/applications/org.openstreetmap.josm.desktop
 
       - type: file
-        url: https://josm.openstreetmap.de/export/18297/josm/trunk/native/linux/tested/usr/bin/josm
-        sha256: fc2cb0438438d54f42720834bef69cda53f3074520e6f70d7f3c98f289d5608c
+        url: https://josm.openstreetmap.de/export/18498/josm/trunk/native/linux/tested/usr/bin/josm
+        sha256: e2b7dafd5f9625aa8a84c6fea6d6aa7e4e5bcbd5012433bbd5c128df98381ddb
         x-checker-data:
           type: html
           url: https://josm.openstreetmap.de/browser/josm/trunk/native/linux/tested/usr/bin/josm

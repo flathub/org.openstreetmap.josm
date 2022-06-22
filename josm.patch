@@ -1,35 +1,7 @@
---- a/josm	2022-05-23 07:30:48.000000000 -0600
-+++ b/josm	2022-05-23 07:34:52.000000000 -0600
-@@ -4,7 +4,7 @@
- 
- # First, the alternative (if known to work) or users preference as defined by $JAVA_HOME. Next, use OpenJDK.
- # Override to a specific one using $JAVACMD
--ALTERNATIVE_JDK=$(readlink -n -f /etc/alternatives/java)
-+ALTERNATIVE_JDK=$(readlink -n -f /etc/alternatives/java || echo "")
- 
- # Let's get the current architecture -- needed for multiarchified Java
- ARCH=$(dpkg --print-architecture 2> /dev/null || true)
-@@ -12,6 +12,7 @@
- JAVA_CMDS="$JAVA_HOME/bin/java"
- 
- # If OpenJDK is only available headless, do not try it
-+if [[ ! -z "$(which dpkg)" ]]; then
- if dpkg --get-selections "openjdk-*-jre" | grep install$ > /dev/null \
- || dpkg --get-selections "openjdk-*-jre:$ARCH" | grep install$ > /dev/null ; then
- 	# LTS versions in decreased order
-@@ -29,8 +30,9 @@
- 	# Development version(s)
- 	JAVA_CMDS="${JAVA_CMDS} /usr/lib/jvm/java-18-openjdk/bin/java /usr/lib/jvm/java-18-openjdk-$ARCH/bin/java"
- fi
-+fi
- # Undetermined version
--JAVA_CMDS="${JAVA_CMDS} /usr/lib/jvm/default-java/bin/java /usr/bin/java"
-+JAVA_CMDS="${JAVA_CMDS} /usr/bin/java"
- 
- if [ -f /etc/default/josm ]; then
-     . /etc/default/josm
-@@ -56,6 +58,23 @@
-     done
+--- a/josm	(revision 18499)
++++ b/josm	(working copy)
+@@ -12,6 +12,23 @@
+     JAVA_CMDS=""
  fi
  
 +function updateHiDPI() {
@@ -49,16 +21,14 @@
 +  export GDK_SCALE
 +}
 +
- if [ "$JAVACMD" ]; then
-     echo "Using $JAVACMD to execute josm." || true
-     if [[ "${JAVACMD}" =~ 'java-9' ]] || [[ "${JAVACMD}" =~ 'java-10' ]]; then
-@@ -68,7 +87,8 @@
+ dpkg_java() {
+   # Let's get the current architecture -- needed for multiarchified Java
+   ARCH=$(dpkg --print-architecture 2> /dev/null || true)
+@@ -86,6 +103,7 @@
      fi
      set +e
      while true; do
--        $JAVACMD $JAVA_OPTS -jar /usr/share/josm/josm.jar "$@"
 +        updateHiDPI
-+        $JAVACMD $JAVA_OPTS -jar /app/bin/josm.jar "$@"
+         $JAVACMD $JAVA_OPTS -jar "${JOSM_PATH}" "$@"
          if [ "z$?" != "z9" ]; then
              break
-         fi

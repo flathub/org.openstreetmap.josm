@@ -13,6 +13,8 @@ finish-args:
   - --filesystem=xdg-download
   - --env=PATH=/usr/bin:/app/bin:/app/jre/bin
   - --env=JAVA_HOME=/app/jre
+  - --env=JAVAFX_HOME=/app/share/openjfx
+  - --env=JOSM_PATH=/app/bin/josm.jar
 
 build-options:
   env:
@@ -33,6 +35,24 @@ modules:
     build-commands:
       - /usr/lib/sdk/openjdk17/install.sh
 
+  - name: openjfx
+    buildsystem: simple
+    build-commands:
+      - mkdir -p /app/share/openjfx
+      - cp -r ./ /app/share/openjfx
+    sources:
+      - type: archive
+        url: https://download2.gluonhq.com/openjfx/18.0.1/openjfx-18.0.1_linux-aarch64_bin-sdk.zip
+        sha256: 071827b9944fc91ac5ffc5bfd245cca56b4eeca539a154c4aa85338492883e7b
+        only-arches: ["aarch64"]
+      - type: archive
+        url: https://download2.gluonhq.com/openjfx/18.0.1/openjfx-18.0.1_linux-x64_bin-sdk.zip
+        sha256: 99aa9ca3e5a52e20bb70d41612b74f98ae3fc9a035c27581928a9c567e8a6716
+        only-arches: ["x86_64"]
+      - type: archive
+        url: https://download2.gluonhq.com/openjfx/18.0.1/openjfx-18.0.1_linux-arm32_bin-sdk.zip
+        sha256: d9341df20d3c197cbfcf80b757840ee3dc2c26231de8e8fbce945a0f1a503bd1
+        only-arches: ["arm"]
 
   - name: josm-binary
     buildsystem: simple

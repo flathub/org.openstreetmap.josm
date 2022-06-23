@@ -45,14 +45,32 @@ modules:
         url: https://download2.gluonhq.com/openjfx/18.0.1/openjfx-18.0.1_linux-aarch64_bin-sdk.zip
         sha256: 071827b9944fc91ac5ffc5bfd245cca56b4eeca539a154c4aa85338492883e7b
         only-arches: ["aarch64"]
+        x-checker-data:
+          type: anitya
+          project-id: 176095
+          stable-only: true
+          url-template: https://download2.gluonhq.com/openjfx/$major.$minor.$patch/openjfx-$major.$minor.${patch}_linux-aarch64_bin-sdk.zip
+          versions: {"<": "19.0.0", ">=": "18.0.0", "!=": "18.0.2+0"}
       - type: archive
         url: https://download2.gluonhq.com/openjfx/18.0.1/openjfx-18.0.1_linux-x64_bin-sdk.zip
         sha256: 99aa9ca3e5a52e20bb70d41612b74f98ae3fc9a035c27581928a9c567e8a6716
         only-arches: ["x86_64"]
+        x-checker-data:
+          type: anitya
+          project-id: 176095
+          stable-only: true
+          url-template: https://download2.gluonhq.com/openjfx/$major.$minor.$patch/openjfx-$major.$minor.${patch}_linux-x64_bin-sdk.zip
+          versions: {"<": "19.0.0", ">=": "18.0.0", "!=": "18.0.2+0"}
       - type: archive
         url: https://download2.gluonhq.com/openjfx/18.0.1/openjfx-18.0.1_linux-arm32_bin-sdk.zip
         sha256: d9341df20d3c197cbfcf80b757840ee3dc2c26231de8e8fbce945a0f1a503bd1
         only-arches: ["arm"]
+        x-checker-data:
+          type: anitya
+          project-id: 176095
+          stable-only: true
+          url-template: https://download2.gluonhq.com/openjfx/$major.$minor.$patch/openjfx-$major.$minor.${patch}_linux-arm32_bin-sdk.zip
+          versions: {"<": "19.0.0", ">=": "18.0.0", "!=": "18.0.2+0"}
 
   - name: josm-binary
     buildsystem: simple

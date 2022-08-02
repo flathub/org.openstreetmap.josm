@@ -42,8 +42,8 @@ modules:
       - cp -r ./ /app/share/openjfx
     sources:
       - type: archive
-        url: https://download2.gluonhq.com/openjfx/18.0.1/openjfx-18.0.1_linux-aarch64_bin-sdk.zip
-        sha256: 071827b9944fc91ac5ffc5bfd245cca56b4eeca539a154c4aa85338492883e7b
+        url: https://download2.gluonhq.com/openjfx/18.0.2/openjfx-18.0.2_linux-aarch64_bin-sdk.zip
+        sha256: c5b507b5c6fc1adf8b66591e79c6c34b6afa78b5cb4c2f1c6cb200f8940b402c
         only-arches: [aarch64]
         x-checker-data:
           type: anitya
@@ -52,8 +52,8 @@ modules:
           url-template: https://download2.gluonhq.com/openjfx/$major.$minor.$patch/openjfx-$major.$minor.${patch}_linux-aarch64_bin-sdk.zip
           versions: {<: 19.0.0, '>=': 18.0.0, '!=': 18.0.2+0}
       - type: archive
-        url: https://download2.gluonhq.com/openjfx/18.0.1/openjfx-18.0.1_linux-x64_bin-sdk.zip
-        sha256: 99aa9ca3e5a52e20bb70d41612b74f98ae3fc9a035c27581928a9c567e8a6716
+        url: https://download2.gluonhq.com/openjfx/18.0.2/openjfx-18.0.2_linux-x64_bin-sdk.zip
+        sha256: e9d4b119efc65f5a9ca7f6a4ca74b579eb212f7126f91d5f4033fd90f74d1701
         only-arches: [x86_64]
         x-checker-data:
           type: anitya
@@ -62,8 +62,8 @@ modules:
           url-template: https://download2.gluonhq.com/openjfx/$major.$minor.$patch/openjfx-$major.$minor.${patch}_linux-x64_bin-sdk.zip
           versions: {<: 19.0.0, '>=': 18.0.0, '!=': 18.0.2+0}
       - type: archive
-        url: https://download2.gluonhq.com/openjfx/18.0.1/openjfx-18.0.1_linux-arm32_bin-sdk.zip
-        sha256: d9341df20d3c197cbfcf80b757840ee3dc2c26231de8e8fbce945a0f1a503bd1
+        url: https://download2.gluonhq.com/openjfx/18.0.2/openjfx-18.0.2_linux-arm32_bin-sdk.zip
+        sha256: d8a28a81ac18cd4f4485a502d2ba0f5a31828fe43cfa376e699cddc66aa9429a
         only-arches: [arm]
         x-checker-data:
           type: anitya
@@ -99,8 +99,8 @@ modules:
           url-template: https://josm.openstreetmap.de/export/$version/josm/trunk/native/linux/tested/usr/share/applications/org.openstreetmap.josm.desktop
 
       - type: file
-        url: https://josm.openstreetmap.de/export/18512/josm/trunk/native/linux/tested/usr/bin/josm
-        sha512: c31a9d6269021e58a30b6ff2c89f757f73eec8d13ee120e8af78ef724c3301c3ab05fa1495e0b983203d997e1aa1bb20a57173a2465ee2242cd647017553b0fd
+        url: https://josm.openstreetmap.de/export/18515/josm/trunk/native/linux/tested/usr/bin/josm
+        sha512: 825f1eb042c73d1f379b2154792620be799d430ccde9fd96d7a3df04fbcd91c43ed51f77960db2b2aa4ddfdb622daa78d940a89b7c89d3f921117397fa56f1d5
         x-checker-data:
           type: html
           url: https://josm.openstreetmap.de/browser/josm/trunk/native/linux/tested/usr/bin/josm
@@ -111,8 +111,8 @@ modules:
         path: josm.patch
 
       - type: file
-        url: https://josm.openstreetmap.de/download/josm-snapshot-18513.jar
-        sha256: aca04328faba867e151a5cd6e1a77f80153878255117d26044bac36932a309b2
+        url: https://josm.openstreetmap.de/download/josm-snapshot-18531.jar
+        sha256: fdeb066cb6e2750eb4f9ab8c0b55b61b01fb579a9d4d5cdb94336cb24ba1723b
         dest-filename: josm.jar
         x-checker-data:
           type: html

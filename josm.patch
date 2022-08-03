@@ -1,6 +1,6 @@
---- a/josm	(revision 18499)
-+++ b/josm	(working copy)
-@@ -12,6 +12,23 @@
+--- a/josm	2022-08-03 08:50:05.000000000 -0600
++++ b/josm	2022-08-03 08:51:36.000000000 -0600
+@@ -14,6 +14,23 @@
      JAVA_CMDS=""
  fi
  
@@ -22,13 +22,13 @@
 +}
 +
  dpkg_java() {
-   # Let's get the current architecture -- needed for multiarchified Java
-   ARCH=$(dpkg --print-architecture 2> /dev/null || true)
-@@ -86,6 +103,7 @@
+     # Let's get the current architecture -- needed for multiarchified Java
+     ARCH=$(dpkg --print-architecture 2> /dev/null || true)
+@@ -90,6 +107,7 @@
      fi
      set +e
      while true; do
 +        updateHiDPI
+         # shellcheck disable=SC2086
          $JAVACMD $JAVA_OPTS -jar "${JOSM_PATH}" "$@"
          if [ "z$?" != "z9" ]; then
-             break

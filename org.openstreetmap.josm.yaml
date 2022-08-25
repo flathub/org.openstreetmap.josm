@@ -62,8 +62,8 @@ modules:
           url-template: https://download2.gluonhq.com/openjfx/$major.$minor.$patch/openjfx-$major.$minor.${patch}_linux-x64_bin-sdk.zip
           versions: {<: 19.0.0, '>=': 18.0.0, '!=': 18.0.2+0}
       - type: archive
-        url: https://download2.gluonhq.com/openjfx/18.0.1/openjfx-18.0.1_linux-arm32_bin-sdk.zip
-        sha256: d9341df20d3c197cbfcf80b757840ee3dc2c26231de8e8fbce945a0f1a503bd1
+        url: https://download2.gluonhq.com/openjfx/18.0.2/openjfx-18.0.2_linux-arm32_bin-sdk.zip
+        sha256: d8a28a81ac18cd4f4485a502d2ba0f5a31828fe43cfa376e699cddc66aa9429a
         only-arches: [arm]
         x-checker-data:
           type: anitya

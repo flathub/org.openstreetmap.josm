@@ -29,6 +29,7 @@
   <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
 
   <releases>
+    <release version="19017" date="2024-03-13"/>
     <release version="18969" date="2024-02-06"/>
     <release version="18940" date="2024-01-17"/>
     <release version="18907" date="2023-12-07"/>

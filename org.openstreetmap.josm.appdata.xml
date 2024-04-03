@@ -23,12 +23,20 @@
   <content_rating type="oars-1.1"/>
   <launchable type="desktop-id">org.openstreetmap.josm.desktop</launchable>
   <screenshots>
-      <screenshot type="default" width="1024" height="576">https://josm.openstreetmap.de/svn/trunk/native/linux/josm-screenshot.png</screenshot>
+    <screenshot type="default" width="1024" height="576">
+      <image>https://josm.openstreetmap.de/svn/trunk/native/linux/josm-screenshot.png</image>
+      <caption>JOSM with data and background layer loaded</caption>
+    </screenshot>
   </screenshots>
+  <url type="bugtracker">https://josm.openstreetmap.de/query?report=12</url>
   <url type="homepage">https://josm.openstreetmap.de</url>
-  <updatecontact>josm-dev_at_openstreetmap.org</updatecontact>
+  <url type="contact">https://lists.openstreetmap.org/pipermail/josm-dev/</url>
+  <url type="faq">https://josm.openstreetmap.de/wiki/Help</url>
+  <url type="translate">https://josm.openstreetmap.de/wiki/Translations</url>
+  <url type="vcs-browser">https://josm.openstreetmap.de/browser</url>
 
   <releases>
+    <release version="19017" date="2024-03-13"/>
     <release version="18969" date="2024-02-06"/>
     <release version="18940" date="2024-01-17"/>
     <release version="18907" date="2023-12-07"/>

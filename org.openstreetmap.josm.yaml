@@ -3,7 +3,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.openjdk17
+  - org.freedesktop.Sdk.Extension.openjdk21
 command: josm
 rename-icon: josm
 finish-args:
@@ -18,7 +18,7 @@ finish-args:
 
 build-options:
   env:
-    JAVA_HOME: /usr/lib/sdk/openjdk17/
+    JAVA_HOME: /usr/lib/sdk/openjdk21/
 modules:
   - name: xgetres
     buildsystem: simple
@@ -33,7 +33,7 @@ modules:
   - name: openjdk
     buildsystem: simple
     build-commands:
-      - /usr/lib/sdk/openjdk17/install.sh
+      - /usr/lib/sdk/openjdk21/install.sh
 
   - name: openjfx
     buildsystem: simple
@@ -99,8 +99,8 @@ modules:
           url-template: https://josm.openstreetmap.de/export/$version/josm/trunk/native/linux/tested/usr/share/applications/org.openstreetmap.josm.desktop
 
       - type: file
-        url: https://josm.openstreetmap.de/export/18515/josm/trunk/native/linux/tested/usr/bin/josm
-        sha512: 825f1eb042c73d1f379b2154792620be799d430ccde9fd96d7a3df04fbcd91c43ed51f77960db2b2aa4ddfdb622daa78d940a89b7c89d3f921117397fa56f1d5
+        url: https://josm.openstreetmap.de/export/19018/josm/trunk/native/linux/tested/usr/bin/josm
+        sha512: 1e5e825c6aa1aa08f5e04b74a2ca28cf2a4441cf33cf0edc81761c0b0de80ecef2988e06c611b2c25d6375246ef7384333f1cf5552dd6c08a035d55c133c1a44
         x-checker-data:
           type: html
           url: https://josm.openstreetmap.de/browser/josm/trunk/native/linux/tested/usr/bin/josm
@@ -111,8 +111,8 @@ modules:
         path: josm.patch
 
       - type: file
-        url: https://josm.openstreetmap.de/download/josm-snapshot-18969.jar
-        sha256: 6bc9ae470138fbd59d615cfb95813d7519ea548190c4bf1c16621d06bd91eb95
+        url: https://josm.openstreetmap.de/download/josm-snapshot-19017.jar
+        sha256: f8f4acbdab957be7bea81eeccfd005982fdd6615871477b4cd660f12182f4484
         dest-filename: josm.jar
         x-checker-data:
           type: html

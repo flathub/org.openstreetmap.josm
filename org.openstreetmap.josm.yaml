@@ -99,8 +99,8 @@ modules:
           url-template: https://josm.openstreetmap.de/export/$version/josm/trunk/native/linux/tested/usr/share/applications/org.openstreetmap.josm.desktop
 
       - type: file
-        url: https://josm.openstreetmap.de/export/19018/josm/trunk/native/linux/tested/usr/bin/josm
-        sha512: 1e5e825c6aa1aa08f5e04b74a2ca28cf2a4441cf33cf0edc81761c0b0de80ecef2988e06c611b2c25d6375246ef7384333f1cf5552dd6c08a035d55c133c1a44
+        url: https://josm.openstreetmap.de/export/19215/josm/trunk/native/linux/tested/usr/bin/josm
+        sha512: e8505b3b194b17b81834789c39042d9f7ac4721182849575d4d03d2f276637251e85092962bc4ba1a04c26563fad7c764c0cbdbda4fd67d0f3b2bff990fdfcd7
         x-checker-data:
           type: html
           url: https://josm.openstreetmap.de/browser/josm/trunk/native/linux/tested/usr/bin/josm

@@ -36,8 +36,11 @@
   <url type="vcs-browser">https://josm.openstreetmap.de/browser</url>
 
   <releases>
-    <release version="19265" date="2024-12-03">
+    <release version="19277" date="2025-01-04">
       <description></description>
+    </release>
+    <release version="19265" date="2024-12-03">
+      <description/>
     </release>
     <release version="19253" date="2024-10-31">
       <description/>

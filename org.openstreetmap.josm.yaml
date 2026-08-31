@@ -111,8 +111,8 @@ modules:
         path: josm.patch
 
       - type: file
-        url: https://josm.openstreetmap.de/download/josm-snapshot-19555.jar
-        sha256: 3afa6435ea696da4a76416d1907aa821511584ac61b89613143666d67e6b7a29
+        url: https://josm.openstreetmap.de/download/josm-snapshot-19613.jar
+        sha256: 7bba9b5d5eb57db390672ddce571a67de9d5cf0b0e8fe610c4dbde15fbe59077
         dest-filename: josm.jar
         x-checker-data:
           type: html
